@@ -1,0 +1,383 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700);
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,300,700);
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@import url(http://fonts.googleapis.com/css?family=Scada:400,300,700);
+@import url(http://fonts.googleapis.com/css?family=Myriad:400);
+
+@font-face {
+	-webkit-font-smoothing: subpixel-antialiased;
+}
+
+html, body
+{
+	-webkit-font-smoothing: subpixel-antialiased;	
+	background-color:#333;
+	font-family:'Myriad','Scada', sans-serif;
+	font-weight:200;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+	-o-user-select:none;
+	-webkit-user-select:none;
+	height: 100%;
+	width: 100%;
+	overflow:hidden;
+	cursor:default;
+	text-decoration:none;
+}
+
+#header
+{
+	font-family:"Roboto Condensed";
+	z-index:10;
+	background:url(../Resource/image/index/ww.jpg) repeat-x;
+	background-size:contain;
+	position:relative;
+	width:100%;
+	height:40px;
+	overflow:hidden;
+}
+
+#header #mark
+{
+	position:relative;
+	float:left;
+	background-size:cover;
+}
+
+#header #clock
+{
+	float:left;
+	margin-left:calc(50% - 82px);
+	display:table;
+	position:relative;
+	height:40px;
+	width:164px;
+	background-color:rgba(0,0,0,0.7);
+	color:#FFF;
+	overflow:hidden;
+}
+
+#clock #in
+{
+	width:100%;
+	height:40px;
+	position:relative;
+	display:table-cell;
+	vertical-align:middle;
+	text-align:center;
+	letter-spacing:1px;
+	font-weight:500;
+	overflow:hidden;
+	size:auto;
+}
+
+#header #status
+{
+	position:relative;
+	float:right;
+	width:137px;
+	background-color:rgba(0,0,0,0.7);
+	height:40px;
+	color:#FFF;
+	display:table;
+}
+
+#status #inner
+{
+	position:relative;
+	vertical-align:middle;
+	display:table-cell;
+	text-align:center;
+	font-weight:400;
+	letter-spacing:1px;
+}
+
+*
+{
+	margin:0;
+	padding:0;
+}
+
+#section
+{
+	z-index:0;
+	position:relative;
+	width:100%;
+	height:calc(100% - 80px);
+	text-align:center;
+}
+
+#footer
+{
+	font-family:"Roboto Condensed";
+	z-index:10;
+	background:url(../Resource/image/index/ww.jpg) repeat-x;
+	background-size:contain;
+	position:fixed;
+	width:100%;
+	height:40px;
+}
+
+#footer #guide
+{
+	width:160px;
+	height:40px;
+	position:relative;
+	float:left;
+	margin-left:calc(50% - 80px);
+	background-color:rgba(0,0,0,0.7);
+	cursor:pointer;
+	display:table;
+	color:#FFF;
+}
+
+#footer #guide:hover{ color:#09C; }
+
+#guide #in
+{
+	display:table-cell;
+	vertical-align:middle;
+	font-weight:400;
+	text-align:center;
+}
+
+#footer #copyright
+{
+	width:130px;
+	height:40px;
+	position:relative;
+	float:right;
+	color:#F90;
+	font-size:16px;
+	display:table;
+	background-color:rgba(0,0,0,0.4);
+}
+#copyright #in
+{
+	width:100%;
+	height:40px;
+	position:relative;
+	display:table-cell;
+	vertical-align:middle;
+	text-align:center;
+	font-weight:500;
+	overflow:hidden;
+	size:auto;
+	font-family:"Roboto Condensed";
+	/*font-family:"돋움체";*/
+	font-weight:300;
+}
+
+#cover
+{
+	z-index:11;
+	position:absolute;
+	top:0; left:0;
+	width:100%; height:100%;
+	background:rgba(0,0,0,0.6);
+	-moz-transition-duration:0.4s;
+	-ms-transition-duration:0.4s;
+	-o-transition-duration:0.4s;
+	-webkit-transition-duration:0.4s;
+	opacity:0;
+	cursor:pointer;
+}
+
+#cover #message
+{
+	position:absolute;
+	color:#FFF;
+	text-align:center;
+	top:calc(50% - 100px);
+	left:calc(50% - 250px);
+	width:500px;
+	height:200px;
+}
+
+.cursor_image
+{
+	background:url(../Resource/image/all/pointer.png) center no-repeat;
+	margin-left:calc(50% - 75px);
+	background-size:contain;
+	width:150px; height:150px;
+}
+
+#popMessage
+{
+	z-index:1;
+	font-family:"Roboto Condensed";
+	text-align:center;
+	color:#FFF;
+	position:absolute;
+	bottom:50px; left:calc(50% - 125px);
+	width:250px; height:120px;
+	background:rgba(0,0,0,0.8);
+	opacity:0;
+	font-weight:300;
+}
+
+#popMessage #how
+{
+	top:calc(40% - 10%);
+	position:absolute;
+	width:100%; height:50%;
+	font-size:1.2em;
+	font-weight:400;
+}
+
+#popMessage #cancel
+{
+	opacity:0.7;
+	position:absolute;
+	top:0;
+	right:0;
+	width:15px; height:15px;
+	background:url(../Resource/image/all/cancel.png) center;
+	background-size:cover;
+	cursor:pointer;
+}
+
+#popMessage #cancel:hover
+{
+	opacity:1;
+}
+
+#menu
+{
+	position:absolute;
+	z-index:12;
+	width:600px;
+	height:600px;
+	top:-450px;
+	left:calc(50% - 300px);
+	transition-duration: 0.3s;
+	-moz-transition-duration: 0.3s;
+	-ms-transition-duration: 0.3s;
+	-o-transition-duration: 0.3s;
+	-webkit-transition-duration: 0.3s;
+	transform-origin:center center;
+	-moz-transform-origin:center center;
+	-ms-transform-origin:center center;
+	-o-transform-origin:center center;
+	-webkit-transform-origin:center center;
+	opacity:0;
+}
+
+.contents
+{
+	position:absolute;
+	width:200px;
+	height:100px;
+	left:calc(50% - 100px);
+	top:calc(50% - 50px);
+	color:#FFF;
+	text-align:center;
+	font-size:large;
+	box-sizing:border-box;
+	border:solid 3px #FFFFFF;
+	font-weight:400;
+	font-family:"Roboto Condensed";
+}
+
+.contents .visiber
+{
+	position:relative;
+	background-color:rgba(0,0,0,0.65);
+	width:100%;
+}
+
+.contents:nth-child(1)
+{
+	transform:translateY(200px);
+	-moz-transform:translateY(200px);
+	-ms-transform:translateY(200px);
+	-o-transform:translateY(200px);
+	-webkit-transform:translateY(200px);
+	background:url(../Resource/image/index/the_rise_of_a_planet_by_taenaron-doo7j2.jpg) center;
+	background-size:cover;
+}
+.contents:nth-child(2)
+{
+	transform:rotate(90deg) translateY(200px);
+	-moz-transform:rotate(90deg) translateY(200px);
+	-ms-transform:rotate(90deg) translateY(200px);
+	-o-transform:rotate(90deg) translateY(200px);
+	-webkit-transform:rotate(90deg) translateY(200px);
+	background:#C00 center;
+	background-size:cover;
+}
+.contents:nth-child(3)
+{
+	transform:rotate(180deg) translateY(200px);
+	-moz-transform:rotate(180deg) translateY(200px);
+	-ms-transform:rotate(180deg) translateY(200px);
+	-o-transform:rotate(180deg) translateY(200px);
+	-webkit-transform:rotate(180deg) translateY(200px);
+	background:url(../Resource/image/all/menu/music2.jpg) center no-repeat;
+	background-color:#000;
+	background-size:contain;
+}
+.contents:nth-child(4)
+{
+	transform:rotate(270deg) translateY(200px);
+	-moz-transform:rotate(270deg) translateY(200px);
+	-ms-transform:rotate(270deg) translateY(200px);
+	-o-transform:rotate(270deg) translateY(200px);
+	-webkit-transform:rotate(270deg) translateY(200px);
+	background:url(../Resource/image/all/menu/menu_programing.png) center;
+	background-size:cover;
+}
+
+#load_pad
+{
+	top:0; left:0;
+	position:fixed;
+	z-index:13;
+	width:100%;
+	height:100%;
+	background:url(../Resource/image/all/Fantasy-Planet-Art.jpg) center;
+	background-size:cover;
+}
+
+#load_pad #box
+{
+	left:calc(50% - 125px);
+	top:calc(50% - 50px);
+	position:absolute;
+	width:250px;
+	height:100px;
+	background-color:rgba(0,0,0,0.5);
+}
+
+#box #text
+{
+	left:calc(50% - 50%);
+	top:20px;
+	position:absolute;
+	width:100%;
+	height:50px;
+	font-size:24px;
+	color:#FFF;
+	text-align:center;
+}
+
+#box #in
+{
+	overflow:hidden;
+	left:calc(50% - 110px);
+	bottom:20px;
+	position:absolute;
+	width:220px;
+	height:19px;
+	background-image:url(../Resource/image/all/load.gif);
+}
+
+a, a:link, a:active, a:visited
+{
+	color:#FFF;
+	text-decoration:none;
+}

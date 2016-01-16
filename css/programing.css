@@ -1,0 +1,176 @@
+@charset "utf-8";
+/* CSS Document */
+
+#pro_menu
+{
+	position:relative;
+	width:30%;
+	height:100%;
+	background:url(../Resource/image/programing/menu.jpg) center;
+	background-size:cover;
+	float:left;
+}
+
+#pro_menu #pro_container
+{
+	position:relative;
+	width:100%; height:calc(100%/3);
+}
+
+#pro_struc1, #pro_struc2, #pro_struc3
+{
+	z-index:0;
+	margin:auto;
+	top: 0; left:0; bottom:0; right:0;
+	position:absolute;	
+	width:130px; height:130px;
+	overflow:hidden;
+	box-sizing:border-box;
+	border: solid rgba(255,255,255,0) 4px;
+	overflow:hidden;
+	-moz-transition-duration:0.3s;
+	-ms-transition-duration:0.3s;
+	-o-transition-duration:0.3s;
+	-webkit-transition-duration:0.3s;
+	cursor:pointer;
+}
+
+#pro_struc1 #pro_cPlus, #pro_struc2 #pro_jQuery, #pro_struc3 #pro_cocos2d
+{
+	z-index:0;
+	width:100%; height:100%;
+	position:relative;
+	overflow:hidden;
+}
+
+#pro_struc1 #pro_cPlus{ background:url(../Resource/image/index/C++%20Pic.jpg) center; background-size:cover;}
+#pro_struc2 #pro_jQuery{ background:url(../Resource/image/index/jquery.jpg) center;  background-size:cover;}
+#pro_struc3 #pro_cocos2d{ background:url(../Resource/image/programing/cocos2dx.png) center; background-size:contain;}
+
+.pro_cover
+{
+	-moz-transition-duration:0.3s;
+	-ms-transition-duration:0.3s;
+	transition-duration:0.3s;
+	-o-transition-duration:0.3s;
+	-webkit-transition-duration:0.3s;
+	width:100%; height:100%;
+	position:absolute;
+	top:0; left:0; bottom:0; right:0;
+	background-color:rgba(0,0,0,0.4);
+	opacity:1;
+}
+.pro_cover:hover{opacity:0;}
+
+#pro_content
+{
+	position:relative;
+	float:left;
+	width:70%;
+	height:300%;
+}
+
+#pro_contents1, #pro_contents2, #pro_contents3
+{
+	position:relative;
+	float:left;
+	width:100%;
+	height:calc(100%/3);
+}
+
+#pro_contents1{background:url(../Resource/image/programing/lovely-earth-hd.jpg) bottom center; background-size:cover;}
+#pro_contents2{background:url(../Resource/image/programing/Space-HD-Wallpaper_Pack2-12.jpg) bottom center; background-size:cover;}
+#pro_contents3{background:url(../Resource/image/programing/space-art-581394.jpg) bottom center; background-size:cover;}
+
+#pro_contents1 #half_contents, #pro_contents2 #half_contents, #pro_contents3 #half_contents
+{
+	float:left;
+	position:relative;
+	width:50%;
+	height:100%;
+}
+
+#half_contents > #pro_name
+{
+	position:relative;
+	width:100%;
+	height:20%;
+	color:#FFF;
+	font-size:3.5em;
+	font-weight:400;
+}
+
+#pro_name .inner
+{
+	position:absolute;
+	top:0; left:0; bottom:0; right:0;
+	margin:auto;
+	width:60%; height:60px;
+	text-align:left;
+}
+
+#half_contents > .feature
+{
+	position:relative;
+	width:100%;
+	height:80%;
+	font-weight:400;
+	font-family:"Roboto Condensed";
+	color:#FFF;
+	text-align:center;
+	font-size:3em;
+	text-align-last:center;
+}
+
+.feature > .inner
+{
+	position:absolute;
+	width:100%;
+	height:200px;
+	top:0; left:0; bottom:0; right:0;
+	margin:auto;
+	background-color:rgba(0,102,51,0.8);
+}
+
+#half_contents > .content_box
+{
+	text-align:left;
+	position:absolute;
+	width:calc(90% - 20px); height:90%;
+	top:0; left:0; bottom:0; right:0;
+	margin:auto;
+	overflow:auto;
+	background:rgba(255,255,255,0.7);
+	color:#000;
+	font-weight:500;
+	font-size:1.4em;
+	font-family: 'Myriad','Scada', 'Nanum Gothic';
+	line-height:140%;
+	padding:0 10px 0 10px;
+}
+
+@media only all and (max-width: 660px) 
+{
+	html, body { width: 660px; }
+	#header{ width: 660px; }
+	#footer { width: 660px; }
+}
+
+@media only all and (min-width: 660px)
+{
+	html, body { width: 100%; }
+	#footer { width: 100%; }
+}
+
+@media only all and (max-height: 610px)
+{
+	html, body { height: 610px; } 
+	#section{ height: 530px; }	
+	#header{ height: 40px; }
+	#footer { height: 40px; }
+}
+
+@media only all and (min-width: 610px) 
+{
+	html, body { height: 100%; }
+}

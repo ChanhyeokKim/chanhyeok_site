@@ -1,0 +1,162 @@
+@charset "utf-8";
+/* CSS Document */
+
+#head_filter, #foot_filter
+{
+	position:absolute;
+	width: 100%;
+	height: 100%;
+	left:0;
+	transition-duration:1s;
+	-webkit-transition-duration:1s;
+}
+
+#head_filter
+{
+	top:0;
+}
+
+#foot_filter
+{
+	bottom:0;
+}
+
+#slider
+{
+	width:300%;
+	height:100%;
+}
+
+#slider_main
+{
+	position:relative;
+	width:calc(100% / 3);
+	height:100%;
+	background:url(../Resource/image/index/the_rise_of_a_planet_by_taenaron-doo7j2.jpg) top center;
+	background-size:cover;
+	float:left;
+	overflow:hidden;
+}
+
+#slider_ud
+{
+	float:left;
+	position:relative;
+	width:calc(100% / 3);
+	height:300%;
+}
+
+#slider_cPlus, #slider_jQuery, #slider_cocos2d
+{
+	position:relative;
+	width:100%;
+	height:calc(100% / 3);
+	background-size:cover;
+}
+
+#slider_cPlus
+{
+	background:url(../Resource/image/index/C++%20Pic.jpg) center;
+}
+
+#slider_jQuery
+{
+	background:url(../Resource/image/index/jquery.jpg) center;
+}
+
+#slider_cocos2d
+{
+	background:url(../Resource/image/index/cocos2d.jpg) center;
+	background-size:cover;
+}
+
+#section #slider_btn_l, #section #slider_btn_r
+{
+	position:absolute;
+	top:calc(50% - 60px);
+	width:70px;
+	height:120px;
+}
+
+#section #slider_btn_l
+{
+	left:0;
+}
+#section #slider_btn_r
+{
+	right:0;
+}
+#profile
+{
+	position:relative;
+	float:left;
+	width:calc(100% / 3);
+	height:100%;
+	background:url(../Resource/image/index/1342837.jpg) center;
+	background-size:cover;
+}
+
+#profile h1
+{
+	margin-left: 8%;
+	margin-top: 3%;
+	text-align:left;
+	color:#FFF;
+	font-size: 3em;
+	letter-spacing: 11px;
+}
+
+#in h1
+{
+	color:#FFF;
+	font-size: 5em;
+	letter-spacing: 14px;
+	font-weight:200;
+}
+
+#contents_box
+{
+	width:80%;
+	height:250px;
+	background-color:rgba(0,0,0,0.4);
+	top:0; left:0; bottom:0; right:0;
+	margin:auto;
+	position:absolute;
+	font-size:1.6em;
+	font-weight:400;
+	text-align:left;
+	font-family:"Roboto Condensed";
+	color:#FFF;
+	line-height:200%;
+	overflow:auto;
+}
+
+#contents_box > a:hover
+{
+	color:rgba(102,102,102,1);
+}
+
+@media only all and (max-width: 750px) {
+	html, body { width: 750px; } 
+	#section { width: 750px; } 
+	#slider { width: calc(750px*3); } 
+	#header{ width: 750px; }
+	#footer { width: 750px; }
+	
+}
+
+@media only all and (min-width: 750px) {
+	html, body { width: 100%; }
+	#slider { width: 300%; }
+	#footer { width: 100%; }
+}
+
+@media only all and (max-height: 450px) {
+	html, body { height: 450px; } 
+}
+
+@media only all and (min-width: 450px) {
+	html, body { height: 100%; }
+}
+
+
